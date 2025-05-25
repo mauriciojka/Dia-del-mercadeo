@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¡Feliz Día del Mercadólogo!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #8b2c0c;
+      color: #fff;
+      text-align: center;
+    }
+
+    .banner {
+      background-color: #991b1b;
+      padding: 2em 1em;
+    }
+
+    .banner h1 {
+      font-size: 2.5em;
+      color: #fff;
+    }
+
+    .banner h2 {
+      font-size: 2em;
+      color: #facc15;
+    }
+
+    .banner p {
+      font-size: 1.2em;
+      color: #fff;
+      margin-top: 0.5em;
+    }
+
+    .section {
+      padding: 2em 1em;
+      text-align: left;
+      position: relative;
+    }
+
+    .yellow-section {
+      background-color: #f59e0b;
+      color: #000;
+    }
+
+    .red-section {
+      background-color: #991b1b;
+    }
+
+    .orange-section {
+      background-color: #f59e0b;
+      color: #000;
+    }
+
+    .section h3 {
+      font-size: 1.5em;
+    }
+
+    .section h3 span {
+      color: #facc15;
+    }
+
+    .section p,
+    .section ul {
+      font-size: 1.1em;
+      line-height: 1.6em;
+    }
+
+    .section ul {
+      padding-left: 1.5em;
+    }
+
+    button {
+      background-color: #92400e;
+      color: white;
+      border: none;
+      padding: 0.8em 1.2em;
+      font-size: 1em;
+      margin: 1em 0;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+      background-color: #7f1d1d;
+      padding: 1em;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+
+    .flex-text {
+      flex: 1 1 60%;
+    }
+
+    .flex-image {
+      flex: 1 1 35%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.1em; /* imágenes aún más juntas */
+    }
+
+    .flex-image img {
+      max-width: 100px;
+      height: auto;
+    }
+
+    .diana-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+
+    .diana-text {
+      flex: 1 1 60%;
+    }
+
+    .diana-img {
+      flex: 1 1 35%;
+      max-width: 120px;
+      height: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      .flex-container,
+      .diana-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .flex-image {
+        align-items: center;
+      }
+    }
+
+    .vino-title {
+      color: #dd1717;
+    }
+
+    .vino-title span {
+      color: #dd1717;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <h1>¡Feliz Día del</h1>
+    <h2>Mercadólogo!</h2>
+    <p>Los creativos, los estrategas, los que hacen que todo se venda.</p>
+  </div>
+
+  <div class="section yellow-section">
+    <button onclick="toggle('q1')">¿Qué es ser mercadólogo?</button>
+    <div id="q1" class="hidden">
+      <div class="diana-container">
+        <div class="diana-text">
+          <h3>¿Qué es ser <span>mercadólogo</span>?</h3>
+          <p>
+            Es ser capaz de leer al cliente, crear ideas que conectan y convertir un producto en una experiencia que se desea, se recuerda y se recomienda.
+          </p>
+        </div>
+        <img class="diana-img" src="diana.png" alt="Diana" />
+      </div>
+    </div>
+  </div>
+
+  <div class="section red-section">
+    <button onclick="toggle('q2')">¿Qué hacemos en Mercadeo?</button>
+    <div id="q2" class="hidden">
+      <div class="flex-container">
+        <div class="flex-text">
+          <h3>¿Qué hacemos en <span>Mercadeo</span>?</h3>
+          <ul>
+            <li>Observamos, analizamos y entendemos al consumidor.</li>
+            <li>Creamos mensajes y campañas que impactan.</li>
+            <li>Sabemos vender sin presionar, y conectar sin aburrir.</li>
+            <li>Usamos creatividad, estrategia y tecnología para generar valor.</li>
+            <li><em>¡Transformamos ideas en oportunidades de negocio!</em></li>
+          </ul>
+        </div>
+        <div class="flex-image">
+          <img src="bombillo.png" alt="Bombillo" />
+          <img src="megafono.png" alt="Megáfono" />
+          <img src="grafica.png" alt="Gráfica" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section orange-section">
+    <h3 class="vino-title">¿Por qué <span>celebrarnos</span>?</h3>
+    <p>
+      Porque estamos en todo lo que se vende, se ve o se siente como marca. Porque sin mercadeo, muchas grandes ideas nunca llegarían a las personas correctas.
+    </p>
+  </div>
+
+  <footer>
+    El marketing no es solo vender... es conectar.
+  </footer>
+
+  <script>
+    function toggle(id) {
+      const element = document.getElementById(id);
+      element.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
