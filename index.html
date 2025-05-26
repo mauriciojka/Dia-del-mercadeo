@@ -14,7 +14,7 @@
     }
 
     .banner {
-      background-color: #991b1b;
+      background-color: #B63E1D;
       padding: 2em 1em;
     }
 
@@ -25,7 +25,7 @@
 
     .banner h2 {
       font-size: 2em;
-      color: #facc15;
+      color: #F1A82C;
     }
 
     .banner p {
@@ -41,25 +41,31 @@
     }
 
     .yellow-section {
-      background-color: #f59e0b;
+      background-color: #F1A82C;
       color: #000;
     }
 
     .red-section {
-      background-color: #991b1b;
+      background-color: #B63E1D;
     }
 
     .orange-section {
-      background-color: #f59e0b;
+      background-color: #F1A82C;
       color: #000;
     }
 
     .section h3 {
       font-size: 1.5em;
+      font-weight: bold;
     }
 
     .section h3 span {
-      color: #facc15;
+      color: #F1A82C;
+    }
+
+    .white-bold {
+      color: white;
+      font-weight: bold;
     }
 
     .section p,
@@ -112,7 +118,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 0.1em; /* imágenes aún más juntas */
+      gap: 0.1em; /* Imágenes más juntas */
     }
 
     .flex-image img {
@@ -149,14 +155,6 @@
         align-items: center;
       }
     }
-
-    .vino-title {
-      color: #dd1717;
-    }
-
-    .vino-title span {
-      color: #dd1717;
-    }
   </style>
 </head>
 <body>
@@ -171,12 +169,12 @@
     <div id="q1" class="hidden">
       <div class="diana-container">
         <div class="diana-text">
-          <h3>¿Qué es ser <span>mercadólogo</span>?</h3>
+          <h3 class="white-bold">¿Qué es ser mercadólogo?</h3>
           <p>
             Es ser capaz de leer al cliente, crear ideas que conectan y convertir un producto en una experiencia que se desea, se recuerda y se recomienda.
           </p>
         </div>
-        <img class="diana-img" src="diana.png" alt="Diana" />
+        <img class="diana-img" src="diana.png" alt="Diana">
       </div>
     </div>
   </div>
@@ -196,16 +194,16 @@
           </ul>
         </div>
         <div class="flex-image">
-          <img src="bombillo.png" alt="Bombillo" />
-          <img src="megafono.png" alt="Megáfono" />
-          <img src="grafica.png" alt="Gráfica" />
+          <img src="bombillo.png" alt="Bombillo">
+          <img src="megafono.png" alt="Megáfono">
+          <img src="grafica.png" alt="Gráfica">
         </div>
       </div>
     </div>
   </div>
 
   <div class="section orange-section">
-    <h3 class="vino-title">¿Por qué <span>celebrarnos</span>?</h3>
+    <h3 class="white-bold">¿Por qué celebrarnos?</h3>
     <p>
       Porque estamos en todo lo que se vende, se ve o se siente como marca. Porque sin mercadeo, muchas grandes ideas nunca llegarían a las personas correctas.
     </p>
@@ -223,3 +221,4 @@
   </script>
 </body>
 </html>
+
